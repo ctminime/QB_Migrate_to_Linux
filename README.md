@@ -4,8 +4,8 @@ This is my first program fresh out of a 1 week course. So, it is probably a litt
 This was written for Python 3.7.  
 Bencode module can be installed with "pip install bencode.py" found here: https://pypi.org/project/bencode.py/  
 Please do not try and use this without at least a basic understanding of Python.  
-BACK UP YOUR FILES BEFORE PROCEEDING!!! THIS WILL OVERWRITE THEM!!!  
-CORRUPTION MAY HAPPEN!!! USE AT YOUR OWN RISK!!!  
+**BACK UP YOUR FILES BEFORE PROCEEDING!!! THIS WILL OVERWRITE THEM!!!  
+CORRUPTION MAY HAPPEN!!! USE AT YOUR OWN RISK!!!**  
 I would recommend COPYING the "BT_backup" directory to your desktop and running this script on the backup to ensure the originals are untouched.  
 The intent of this is to be able to modify the file locations in the fastresume files to make migrating QBittorrent to Linux easier than manually changing the save path on hundreds of torrents.  
 You will need to modify the value for "tor_dir" and "linux_dir_start" to suite your needs.  
