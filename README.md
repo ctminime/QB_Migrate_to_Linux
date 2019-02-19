@@ -1,4 +1,4 @@
-Python script to make migrating QBittorent to Linux easier by modifying fastresume files  
+## Python script to make migrating QBittorent to Linux easier by modifying fastresume files  
 Written 2/17/2019  
 This is my first program fresh out of a 1 week course. So, it is probably a little crude.  
 This was written for Python 3.7.  
