@@ -7,7 +7,7 @@
 # CORRUPTION MAY HAPPEN!!! USE AT YOUR OWN RISK!!!
 # I would recommend COPYING the "BT_backup" directory to your desktop and running this script on the backup to ensure the originals are untouched.
 # The intent of this is to be able to modify the file locations in the fastresume files to make migrating QBittorrent to Linux easier than manually changing the save path on hundreds of torrents.
-# You will need to modify the value for "tor_dir" and "linux_dir_start" to suite your needs.
+# You will need to modify the value for "tor_dir" and "linux_dir_start" to suit your needs.
 # In my testing, all of my fastresume files (almost 500) the save_path and qBt-savepath had identical values. I don't know if this is true 100% of the time.
 # If for some reason they don't match, this will make them match as it is currently written. I do not know if that will cause a problem
 # Example: this will convert the values of "save_path" and "qBt-savepath" from c:\torrent\downloads\faketorrentsite\music to /data/torrent/downloads/faketorrentsite/music
@@ -16,7 +16,7 @@ import os
 import bencode
 import re
 
-# MODIFY these 2 values to suite your needs
+# MODIFY these 2 values to suit your needs
 # Directory where your QBittorrent fastresume files are
 tor_dir = "C:\\Users\\joem\\Desktop\\BT_backup\\"
 # Start of linux file structure for torrents
