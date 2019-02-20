@@ -16,3 +16,7 @@ c:\torrent\downloads\faketorrentsite\music
 to:  
 /data/torrent/downloads/faketorrentsite/music  
 Due to limitations in the bencode.py module, I had to re-write the entire fastresume file instead of just modifying the value in "save_path" and "qBt-savepath"  
+
+
+
+**This does not include a "how to" to fully migrate QBittorrent to Linux.**
