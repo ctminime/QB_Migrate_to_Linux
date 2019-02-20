@@ -19,7 +19,7 @@ import re
 
 # MODIFY these 2 values to suit your needs
 # Directory where your QBittorrent fastresume files are
-tor_dir = "C:\\Users\\joem\\Desktop\\BT_backup\\"
+tor_dir = "C:\\Users\\user\\Desktop\\BT_backup\\"
 # Start of linux file structure for torrents
 linux_dir_start = "/data/"
 
