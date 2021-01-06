@@ -1,5 +1,6 @@
 ## Python script to make migrating QBittorent to Linux easier by modifying fastresume files  
-Written 2/17/2019  
+Originally Written 2/17/2019  
+**1/5/2021 - Update coming soon**  
 This is my first program fresh out of a 1 week course. So, it is probably a little crude.  
 This was written for Python 3.7.
 
@@ -21,6 +22,19 @@ to:
 /data/torrent/downloads/faketorrentsite/music  
 Due to limitations in the bencode.py module, I had to re-write the entire fastresume file instead of just modifying the value in "save_path" and "qBt-savepath"  
 
+**Issues that I ran into:**
 
+1. This will not correct case discrepancies. For example, if the fastresume file points to "c:\torrent\downloads\faketorrentsite\linux_isos" but the actual directory is "c:\torrent\downloads\faketorrentsite\LINUX_ISOS", this works just fine in Windows but will cause a path not found error once converted to nix directory structure. (this is not something I am going to try and fix)
+2. The script does not currently modify the "mapped_files" section of the fastresume file. Again this can lead to a path not found error.  
+For example, if 'savepath' = "/torrent/downloads/" and entries in 'mapped_files' = "text_files\{filename} the complete paths in QB may look like this (Notice the change in direction of the slashes):  
+/torrent/downloads/text_files\text_file_1.txt  
+/torrent/downloads/text_files\text_file_2.txt  
+/torrent/downloads/text_files\text_file_3.txt  
+/torrent/downloads/text_files\text_file_4.txt  
+/torrent/downloads/text_files\text_file_5.txt  
+/torrent/downloads/text_files\text_file_6.txt  
+/torrent/downloads/text_files\text_file_7.txt  
+/torrent/downloads/text_files\text_file_8.txt  
+I am going to try an fix this issue. However, in my case, I only had about 10 of these and a couple of the 1st issue, so I just fixed them manually within QB.  
 
 **This does not include a "how to" to fully migrate QBittorrent to Linux.**
