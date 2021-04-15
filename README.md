@@ -1,9 +1,12 @@
 ## Python script to make migrating QBittorent to Linux easier by modifying fastresume files  
 Originally Written 2/17/2019  
-**1/5/2021 - Update coming soon**
-**4/14/2021 - Been a little while (2 months?) since I worked on this.. until last night. The script took on a life of its own. It went from being less than 20 lines of code (excluding comments) to now it is somewhere shy of 200 lines. The new version will be more of a walk-through that has several differnet features including: optional backup, dry runs, and some minor analysis of existing save paths in the fastresume file.**
+
+**1/5/2021 - Update coming soon**  
+
+**4/14/2021 - Been a little while (2 months?) since I worked on this.. until last night. The script took on a life of its own. It went from being less than 20 lines of code (excluding comments) to now it is somewhere shy of 200 lines. The new version will be more of a walk-through that has several differnet features including: optional backup, dry runs, and some minor analysis of existing save paths in the fastresume file.**  
+
 This is my first program fresh out of a 1 week course. So, it is probably a little crude.  
-This was written for Python 3.7.
+Written for Python 3.7.
 
 Bencode module can be installed with **"pip install bencode.py"** found here: https://pypi.org/project/bencode.py/
 
