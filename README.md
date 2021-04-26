@@ -5,6 +5,8 @@ Originally Written 2/17/2019
 
 **4/14/2021 - Been a little while (2 months?) since I worked on this.. until last night. The script took on a life of its own. It went from being less than 20 lines of code (excluding comments) to now it is somewhere shy of 200 lines. The new version will be more of a walk-through that has several differnet features including: optional backup, dry runs, and some minor analysis of existing save paths in the fastresume file.**  
 
+**4/25/2021 - Over 200 lines now. Getting close to being done.**  
+
 This is my first program fresh out of a 1 week course. So, it is probably a little crude.  
 Written for Python 3.7.
 
