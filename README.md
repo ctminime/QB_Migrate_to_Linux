@@ -7,6 +7,8 @@ Originally Written 2/17/2019
 
 **4/25/2021 - Over 200 lines now. Getting close to being done.**  
 
+**5/19/2021 - UHG, tonight was my 1st chance to work on this in almost a month. I have it fully functional now but there are 1 or 2 things I want to improve. If I can't get to it in the next week or so, I will upload it as it is along with an updated readme.**  
+
 This is my first program fresh out of a 1 week course. So, it is probably a little crude.  
 Written for Python 3.7.
 
