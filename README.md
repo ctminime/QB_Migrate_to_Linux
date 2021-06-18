@@ -1,16 +1,24 @@
 ## Python script to make migrating QBittorent to Linux easier by modifying fastresume files  
-Originally Written 2/17/2019  
 
-**1/5/2021 - Update coming soon**  
+6/18/2021 - After months of very sporadic times of being able to work on this, version 2 is out.
+However, I am keeping version 1 around if for some reason anyone would prefer that.
+I am not completely satisfied with version 2 yet.
+The main thing is, I would like it to be able to do multiple dry runs with different settings before moving on to actual modification. 
 
-**4/14/2021 - Been a little while (2 months?) since I worked on this.. until last night. The script took on a life of its own. It went from being less than 20 lines of code (excluding comments) to now it is somewhere shy of 200 lines. The new version will be more of a walk-through that has several differnet features including: optional backup, dry runs, and some minor analysis of existing save paths in the fastresume file.**  
+Version 2 is a guided way to back up and rewrite the fastresume files in preparation for importing into Linux.
+This is intended to be run on Windows, but it should be able to run on linux as well (the Python script, not the executable). Eventually, this might evolve into a full migration tool.
+But for now, it converts from Windows to Linux only. Importing into Linux will have to be manually done.
 
-**4/25/2021 - Over 200 lines now. Getting close to being done.**  
+Also new with this release is an executable download that can be run from a Windows Command Prompt. That way, users unfamiliar with Python don't have to download and install it.
+This was done very generically with PyInstaller. This was my first time using it, and I am pleasantly surprised how easy it was.
 
-**5/19/2021 - UHG, tonight was my 1st chance to work on this in almost a month. I have it fully functional now but there are 1 or 2 things I want to improve. If I can't get to it in the next week or so, I will upload it as it is along with an updated readme.**  
-
-This is my first program fresh out of a 1 week course. So, it is probably a little crude.  
-Written for Python 3.7.
+So, if you use the EXE, you can pretty much ignore the stuff below.
+Just download the EXE, run it, and when you have your modified backup of the BT_backup folder, manually import it into Linux.
+This program will do the following:  
+1. Ask you if you want to do a backup or if you already have one.
+2. Either manually or semi-automatically determine replacements of base paths
+3. Do a dry run and show you what will change
+4. Modify the files in the back that the program made or you specified.
 
 Bencode module can be installed with **"pip install bencode.py"** found here: https://pypi.org/project/bencode.py/
 
@@ -30,19 +38,9 @@ to:
 /data/torrent/downloads/faketorrentsite/music  
 Due to limitations in the bencode.py module, I had to re-write the entire fastresume file instead of just modifying the value in "save_path" and "qBt-savepath"  
 
-**Issues that I ran into:**
+**Known Issues:**
 
 1. This will not correct case discrepancies. For example, if the fastresume file points to "c:\torrent\downloads\faketorrentsite\linux_isos" but the actual directory is "c:\torrent\downloads\faketorrentsite\LINUX_ISOS", this works just fine in Windows but will cause a path not found error once converted to nix directory structure. (this is not something I am going to try and fix)
-2. The script does not currently modify the "mapped_files" section of the fastresume file. Again this can lead to a path not found error.  
-For example, if 'savepath' = "/torrent/downloads/" and entries in 'mapped_files' = "text_files\{filename} the complete paths in QB may look like this (Notice the change in direction of the slashes):  
-/torrent/downloads/text_files\text_file_1.txt  
-/torrent/downloads/text_files\text_file_2.txt  
-/torrent/downloads/text_files\text_file_3.txt  
-/torrent/downloads/text_files\text_file_4.txt  
-/torrent/downloads/text_files\text_file_5.txt  
-/torrent/downloads/text_files\text_file_6.txt  
-/torrent/downloads/text_files\text_file_7.txt  
-/torrent/downloads/text_files\text_file_8.txt  
-I am going to try an fix this issue. However, in my case, I only had about 10 of these and a couple of the 1st issue, so I just fixed them manually within QB.  
+2. (**FIXED**)The script does not currently modify the "mapped_files" section of the fastresume file.  
 
 **This does not include a "how to" to fully migrate QBittorrent to Linux.**

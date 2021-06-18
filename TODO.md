@@ -6,3 +6,4 @@
   - [ ] Go to file modification once dry run looks satisfactory.
 - [x] Paginate output
 - [ ] Paginate better
+- [ ] Improve display formatting
