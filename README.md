@@ -1,4 +1,4 @@
-## Python script to make migrating QBittorent to Linux easier by modifying fastresume files  
+# Python script to make migrating QBittorent to Linux easier by modifying fastresume files  
 
 6/18/2021 - After months of very sporadic times of being able to work on this, version 2 is out.
 However, I am keeping version 1 around if for some reason anyone would prefer that.
@@ -18,10 +18,14 @@ This program will do the following:
 1. Ask you if you want to do a backup or if you already have one.
 2. Either manually or semi-automatically determine replacements of base paths
 3. Do a dry run and show you what will change
-4. Modify the files in the back that the program made or you specified.
+4. Modify the files in the backup that the program made or that you specified.
+
+If you want to understand how the program semi-automatically determines base paths for replacement, see the wiki page here:  
+https://github.com/ctminime/QB_Migrate_to_Linux/wiki/Base-path-replacement-explained
 
 ----------------------------------------------------------
 ----------------------------------------------------------
+# Notes for use with the Python scripts
 
 Bencode module can be installed with **"pip install bencode.py"** found here: https://pypi.org/project/bencode.py/
 
