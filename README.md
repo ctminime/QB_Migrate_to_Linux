@@ -20,6 +20,9 @@ This program will do the following:
 3. Do a dry run and show you what will change
 4. Modify the files in the back that the program made or you specified.
 
+----------------------------------------------------------
+----------------------------------------------------------
+
 Bencode module can be installed with **"pip install bencode.py"** found here: https://pypi.org/project/bencode.py/
 
 Please do not try and use this without at least a basic understanding of Python.
